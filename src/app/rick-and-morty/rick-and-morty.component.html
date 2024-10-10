@@ -1,0 +1,12 @@
+
+<div class="card-group">
+    <div *ngFor="let character of characters" class="card">
+      <img class="card-img-top" src="{{character.image}}" alt="Imagen del personaje">
+      <div class="card-body">
+        <h2 class="card-title" [ngClass]="{'status-alive': character.status === 'Alive', 'status-dead': character.status === 'Dead', 'status-unknown': character.status === 'unknown'}">
+            {{character.name}}</h2>
+        <h3 class="card-text">{{character.status}}</h3>
+        <h3 class="card-text">{{character.species}}</h3>
+      </div>
+    </div>
+  </div>
